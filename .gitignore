@@ -12,3 +12,6 @@
 
 # Project-local glide cache, RE: https://github.com/Masterminds/glide/issues/736
 .glide/
+
+# Files that should not be exposed to public
+client_test.go
