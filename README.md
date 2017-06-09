@@ -1,5 +1,6 @@
 # go-awql
 [![Build Status](https://travis-ci.org/habibrosyad/go-awql.svg?branch=master)](https://travis-ci.org/habibrosyad/go-awql)
+[![GoDoc](https://godoc.org/github.com/habibrosyad/go-awql?status.svg)](https://godoc.org/github.com/habibrosyad/go-awql)
 
 A simple package to fetch AWQL query results. Currently only support querying against Adwords report, support for services will come later.
 
