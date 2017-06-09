@@ -42,7 +42,7 @@ func newReportQuery(c *Client, q string) (*reportQuery, error) {
 
 	res, err := c.client.Do(req)
 	if err != nil || res.StatusCode != 200 {
-		if res.StatusCode != 200 {
+		if err == nil && res.StatusCode != 200 {
 			defer res.Body.Close()
 			var b []byte
 			b, err = ioutil.ReadAll(res.Body)
