@@ -30,7 +30,7 @@ client := awql.NewClient(auth)
 
 Begin querying. This sample is for querying Adwords report.
 ```go
-rows, err := c.Query("SELECT Date, ActiveViewCtr FROM ACCOUNT_PERFORMANCE_REPORT DURING TODAY");
+rows, err := client.Query("SELECT Date, ActiveViewCtr FROM ACCOUNT_PERFORMANCE_REPORT DURING TODAY");
 if err != nil {
 	panic(err) // Can not continue, do error handling.
 }

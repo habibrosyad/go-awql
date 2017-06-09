@@ -20,7 +20,7 @@ Create a new client.
 
 Begin querying. This sample is for querying Adwords report.
 
-	rows, err := c.Query("SELECT Date, ActiveViewCtr FROM ACCOUNT_PERFORMANCE_REPORT DURING TODAY");
+	rows, err := client.Query("SELECT Date, ActiveViewCtr FROM ACCOUNT_PERFORMANCE_REPORT DURING TODAY");
 	if err != nil {
 		panic(err) // Can not continue, do error handling.
 	}
