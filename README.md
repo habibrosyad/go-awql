@@ -42,10 +42,12 @@ for rows.Next() {
 	if err != nil {
 		// Do error handling.
 	}
-	// Do anthing with the returned row
+	// Do anthing with the returned row.
+	// Result is automatically mapped to its respective field in the AWQL definition.
+	// E.g. to access the previous result you can use row["Date"] and row["ActiveViewCtr"].
 }
 ```
 
-The returned result from `rows.Scan()` is `map[string]interface{}`. To map the result into a struct you might want to use [mapstructure](https://github.com/mitchellh/mapstructure).
+The returned result from `rows.Scan()` is `map[string]interface{}`. To map the result into a struct you might want to use [mapstructure](https://github.com/mitchellh/mapstructure). Key of the map is the same as the field used in the AWQL definition. For example, in the previous sample you can access the result as `row["Date"]` and `row["ActiveViewCtr"]`.
 
 
